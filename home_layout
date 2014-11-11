@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:id="@+id/RelativeLayout1"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:background="@drawable/wallpaper_eggs"  
+    android:orientation="vertical" >  
+  
+    <RelativeLayout  
+        android:id="@+id/handle_btnlayout"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content" >  
+  
+        <Button  
+            android:id="@+id/previous_music"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_alignParentLeft="true"  
+            android:background="@drawable/control_pre" />  
+  
+        <Button  
+            android:id="@+id/repeat_music"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_toRightOf="@id/previous_music"  
+            android:background="@drawable/control_mode_list_cycle" />  
+  
+        <Button  
+            android:id="@+id/play_music"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_toRightOf="@id/repeat_music"  
+            android:background="@drawable/control_play" />  
+  
+        <Button  
+            android:id="@+id/shuffle_music"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_toRightOf="@id/play_music"  
+            android:background="@drawable/control_mode_random" />  
+  
+        <Button  
+            android:id="@+id/next_music"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_alignParentRight="true"  
+            android:background="@drawable/control_next" />  
+    </RelativeLayout>  
+  
+    <ListView  
+        android:id="@+id/music_list"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_below="@id/handle_btnlayout"  
+        android:layout_marginBottom="50dp" >  
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/singleSong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/music_album"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_launcher" />
+
+        <RelativeLayout
+            android:id="@+id/music_about_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/music_album"
+            android:layout_toRightOf="@id/music_album" >
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5.0dp"
+                android:layout_marginTop="5.0dp"
+                android:text="@string/singer" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/text1"
+                android:layout_marginLeft="5.0dp"
+                android:layout_marginTop="8.0dp"
+                android:text="@string/time" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/music_about_layout"
+            android:background="@drawable/image_button_play_list_pressed" />
+
+    </RelativeLayout>
+  
+</RelativeLayout>  
